@@ -6,4 +6,4 @@ enable_testing()
 
 include(${Catch2_SOURCE_DIR}/extras/Catch.cmake)
 
-add_custom_target(all_tests DEPENDS)
+add_subdirectory(random_lib)
