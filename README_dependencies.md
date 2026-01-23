@@ -23,7 +23,7 @@ For example, on Windows, you can run the following to install llvm, cmake, ninja
 ```ps1
 # windows example (open shell as admin)
 curl -LJO "https://github.com/aminya/setup-cpp/releases/download/v0.5.7/setup_cpp_windows.exe"
-./setup_cpp_windows --compiler llvm --cmake true --ninja true --ccache true --cppcheck true
+./setup_cpp_windows --compiler llvm --cmake true --ninja true --cppcheck true
 
 RefreshEnv.cmd # reload the environment
 ```
@@ -123,47 +123,6 @@ The following compilers should work:
 
 ### Optional Dependencies
 #### C++ Tools
-  * [Doxygen](http://doxygen.nl/)
-	<details>
-	<summary>Install Command</summary>
-
-	- Debian/Ubuntu:
-
-			sudo apt-get install doxygen
-			sudo apt-get install graphviz
-
-	- Windows:
-
-			choco install doxygen.install -y
-			choco install graphviz -y
-
-	- MacOS:
-
-			brew install doxygen
-	 		brew install graphviz
-
-	</details>
-
-
-  * [ccache](https://ccache.dev/)
-	<details>
-	<summary>Install Command</summary>
-
-	- Debian/Ubuntu:
-
-			sudo apt-get install ccache
-
-	- Windows:
-
-			choco install ccache -y
-
-	- MacOS:
-
-			brew install ccache
-
-	</details>
-
-
   * [Cppcheck](http://cppcheck.sourceforge.net/)
 	<details>
 	<summary>Install Command</summary>
@@ -180,13 +139,4 @@ The following compilers should work:
 
 			brew install cppcheck
 
-	</details>
-
-
-  * [include-what-you-use](https://include-what-you-use.org/)
-	<details>
-	<summary>Install Command</summary>
-
-	Follow instructions here:
-	https://github.com/include-what-you-use/include-what-you-use#how-to-install
 	</details>

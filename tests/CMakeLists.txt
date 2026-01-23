@@ -1,0 +1,9 @@
+include(CTest)
+
+project(CmakeConfigPackageTests LANGUAGES CXX)
+
+enable_testing()
+
+include(${Catch2_SOURCE_DIR}/extras/Catch.cmake)
+
+add_custom_target(all_tests DEPENDS)

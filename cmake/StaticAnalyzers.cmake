@@ -1,4 +1,4 @@
-macro(cmake_template_enable_cppcheck WARNINGS_AS_ERRORS CPPCHECK_OPTIONS)
+macro(project_enable_cppcheck WARNINGS_AS_ERRORS CPPCHECK_OPTIONS)
   find_program(CPPCHECK cppcheck)
   if(CPPCHECK)
 
@@ -51,7 +51,7 @@ macro(cmake_template_enable_cppcheck WARNINGS_AS_ERRORS CPPCHECK_OPTIONS)
   endif()
 endmacro()
 
-macro(cmake_template_enable_clang_tidy target WARNINGS_AS_ERRORS)
+macro(project_enable_clang_tidy target WARNINGS_AS_ERRORS)
 
   find_program(CLANGTIDY clang-tidy)
   if(CLANGTIDY)

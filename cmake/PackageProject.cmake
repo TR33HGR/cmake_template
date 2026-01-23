@@ -1,6 +1,6 @@
 # Uses ycm (permissive BSD-3-Clause license) and ForwardArguments (permissive MIT license)
 
-function(cmake_template_package_project)
+function(project_package_project)
   cmake_policy(SET CMP0103 NEW) # disallow multiple calls with the same NAME
 
   set(_options ARCH_INDEPENDENT # default to false
@@ -155,7 +155,7 @@ function(cmake_template_package_project)
   unset(_PackageProject_TARGETS)
 
   # download ForwardArguments
-  FetchContent_Populate (
+  FetchContent_Populate(
     _fargs
     URL https://github.com/polysquare/cmake-forward-arguments/archive/8c50d1f956172edb34e95efa52a2d5cb1f686ed2.zip)
 
