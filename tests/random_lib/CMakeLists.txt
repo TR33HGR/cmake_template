@@ -4,7 +4,6 @@ target_link_libraries(
   PRIVATE project_warnings
           project_options
           random_lib
-          trompeloeil::trompeloeil
           Catch2::Catch2WithMain)
 
 catch_discover_tests(test_random)

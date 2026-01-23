@@ -1,4 +1,7 @@
+#include <cstddef>
+#include <memory>
 #include <random>
+#include <string>
 
 #include "string_gen.hpp"
 

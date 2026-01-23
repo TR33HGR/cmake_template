@@ -1,5 +1,7 @@
+#include <cstddef>
+#include <string>
+
 #include <catch2/catch_test_macros.hpp>
-#include <catch2/trompeloeil.hpp>
 
 #include "random/string_gen.hpp"
 
