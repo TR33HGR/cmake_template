@@ -9,5 +9,3 @@ target_link_system_libraries(
   CLI11::CLI11
   fmt::fmt
   spdlog::spdlog)
-
-target_include_directories(main PRIVATE "${CMAKE_SOURCE_DIR}/configured_files/include")
