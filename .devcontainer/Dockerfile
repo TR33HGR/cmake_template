@@ -1,5 +1,4 @@
-# [Choice] bionic (18.04), focal (20.04)
-ARG VARIANT="focal"
+ARG VARIANT="noble"
 FROM ubuntu:${VARIANT}
 
 # Restate the variant to use it later on in the llvm and cmake installations
@@ -11,16 +10,14 @@ RUN apt-get update -qq && export DEBIAN_FRONTEND=noninteractive && \
         software-properties-common wget apt-utils file zip \
         openssh-client gpg-agent socat rsync \
         make ninja-build git \
-        python3 python3-pip
+        python3 python3-venv pipx
 
-# Install cmake-format
-RUN python3 -m pip install --upgrade pip setuptools && \
-    python3 -m pip install cmake-format && \
-    cmake-format --version
+# Make pipx-installed tools visible
+ENV PATH="/root/.local/bin:${PATH}"
 
-# User-settable versions:
-# This Dockerfile should support gcc-[7, 8, 9, 10, 11] and clang-[10, 11, 12, 13]
-# Earlier versions of clang will require significant modifications to the IWYU section
+# Install pip packages
+RUN pipx install cmakelang
+
 ARG GCC_VER="14"
 # Add gcc-${GCC_VER}
 RUN add-apt-repository -y ppa:ubuntu-toolchain-r/test && \

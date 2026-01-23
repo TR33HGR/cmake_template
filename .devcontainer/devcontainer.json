@@ -46,7 +46,6 @@
 	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
 	"features": {
 		"git": "latest",
-		"git-lfs": "latest",
-		"powershell": "latest"
+		"git-lfs": "latest"
 	}
 }
