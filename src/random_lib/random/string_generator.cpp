@@ -3,7 +3,7 @@
 #include <random>
 #include <string>
 
-#include "string_gen.hpp"
+#include "string_generator.hpp"
 
 namespace rnd {
 

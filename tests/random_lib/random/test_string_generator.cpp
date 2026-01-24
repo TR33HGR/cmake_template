@@ -6,7 +6,7 @@
 #include <catch2/matchers/catch_matchers_container_properties.hpp>
 #include <catch2/matchers/catch_matchers_string.hpp>
 
-#include "random/string_gen.hpp"
+#include "random/string_generator.hpp"
 
 namespace rnd::test {
 
