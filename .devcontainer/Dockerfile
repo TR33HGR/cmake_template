@@ -80,7 +80,7 @@ ENV CC=${CC:-"gcc"}
 ENV CXX=${CXX:-"g++"}
 
 # Include project
-ADD . /workspaces/project
-WORKDIR /workspaces/project
+#ADD . /workspaces/project
+#WORKDIR /workspaces/project
 
 CMD ["/bin/bash"]
