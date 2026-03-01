@@ -1,6 +1,6 @@
 #pragma once
 #include <memory>
-#include <string>
+#include <string_view>
 
 namespace rnd {
 class StringGenerator;
@@ -14,7 +14,7 @@ class Creator
 {
 public:
   virtual ~Creator() = default;
-  [[nodiscard]] virtual User createUser(const std::string &name) const = 0;
+  [[nodiscard]] virtual User createUser(std::string_view name) const = 0;
 };
 
 std::unique_ptr<Creator> createCreator();

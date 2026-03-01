@@ -1,12 +1,13 @@
 #pragma once
 #include <string>
+#include <string_view>
 
 namespace usr {
 
 struct User
 {
 public:
-  User(const std::string &id, const std::string &name) : mId{ id }, mName{ name } {};
+  User(std::string_view id, std::string_view name) : mId{ id }, mName{ name } {};
   const std::string &id() const { return mId; }
   const std::string &name() const { return mName; }
 

@@ -1,6 +1,6 @@
 #include <cstddef>
 #include <memory>
-#include <string>
+#include <string_view>
 #include <utility>
 
 #include "creator.hpp"
@@ -21,7 +21,7 @@ namespace {
     explicit DefaultCreator(std::unique_ptr<rnd::StringGenerator> randomStringGenerator)
       : mRandomStringGenerator{ std::move(randomStringGenerator) }
     {}
-    [[nodiscard]] User createUser(const std::string &name) const override
+    [[nodiscard]] User createUser(std::string_view name) const override
     {
       return { mRandomStringGenerator->getString(ID_LENGTH), name };
     }

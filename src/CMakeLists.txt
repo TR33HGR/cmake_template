@@ -11,4 +11,6 @@ target_link_system_libraries(
   PRIVATE
   CLI11::CLI11
   fmt::fmt
-  spdlog::spdlog)
+  spdlog::spdlog
+  user_lib
+  )
