@@ -1,0 +1,4 @@
+add_library(customer_lib INTERFACE)
+target_link_libraries(customer_lib INTERFACE project_options project_warnings)
+
+target_include_directories(customer_lib INTERFACE .)
